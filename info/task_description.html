@@ -1,39 +1,44 @@
-<p>
-    <i>( Describe task in general )</i>
+<div class="story">
+<p>“Hey Nikola,” Stephen called out from behind a stack of shelves. “What’s this thing do? It’s got some kind of dial and makes clicking noises everytime I go near the container of supplies we picked up at our last stop.”</p>
+<p>“Uhhh... Hangon.” Nikola hurried over to where Stephen was standing. “No, no no no nonononono... This is bad.”</p>
+<p>“Uh, what’s bad?”</p>
+<p>“This device is a particle detector. It’s used to identify high energy particles given off by nuclear decay.”</p>
+<p>“What’s so bad ah- ah- CHOO ‘bout that?” Sofia asked, sneezing from the high concentration of dust kicked up by her pathological need to touch and play with everything on the shelf.</p>
+<p>“Well it’s being set off by something which means that there’s something radioactive nearby. Which is NOT GOOD. Radiation is very dangerous and invisible to the eye, which is especially bad for us because none of us are radiation hardened. Stephen, you said it went off near the supplies container? Which one?”</p>
+<p>“The last one. It’s about NxN big”</p>
+<p>“Okay, we need to search for the radiation source and find a better way to contain it.” </p>
+
+</div>
+
+<p>The robots have learned that the last container NxN (3<=N<=10) which they picked up during a supply stop on another island is radioactive. There are five different kinds of spare parts contained within marked by number. The radiation is emitted from the largest group of identical spare parts (where each part is adjacently joined). Help them find this group and point out the quantity of identical parts within the group as well as the number of the spare part itself in the container.</p>
+
+<p>We have matrix A which is NxN (3<=N<=10). The numbers 1 through 5 are used to label the different kinds of spare parts--the elements of A. Find the largest group of identical numbers adjacently joined to each other and point out both the quantity of the spare parts within the group and the number of the spare part itself.</p>
+
+<p class="for_info_only" style="text-align: center;"><img src="{{ MEDIA }}radiation_search.png" alt="radiation_search"  width="400px"/></p>
+
+<p class="for_editor_only" style="text-align: center;"><img
+src="{{ MEDIA }}radiation_search.png" alt="radiation_search" width="380px"/>
 </p>
 
-<p>
-    Sum two passed ints
-</p>
+<p class="p1"><strong>Input: </strong>A list of lists. Each list contains integers</p>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
-</p>
-
-<p>
-    <strong>Output: </strong> Int. 
-</p>
-
+<p class="p1"><strong>Output: </strong>A list of two integers -- size and marking of the largest group.</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <p><strong>Example:</strong></p>
+
+<pre class="brush: python">checkio([
+ [1,2,3,4,5],
+ [1,1,1,2,3],
+ [1,1,1,2,2],
+ [1,2,2,2,1],
+ [1,1,1,1,1]
+])==[14,1]
+</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    Unions search algorithms, which are using in image recognizing.
 </p>
