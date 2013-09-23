@@ -1,11 +1,22 @@
-def checkio(a, b):
-    """
-        sums two passed arguments
-    """
-    return None
+def checkio(matrix):
+    #replace this for solution
+    return [0, 0]
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    assert checkio(3, 2) == 5
-    assert checkio(5, 7) == 12
-    print('Done')
+    assert checkio([
+        [1, 2, 3, 4, 5],
+        [1, 1, 1, 2, 3],
+        [1, 1, 1, 2, 2],
+        [1, 2, 2, 2, 1],
+        [1, 1, 1, 1, 1]
+    ]) == [14, 1], "14 of 1"
+
+    assert checkio([
+        [2, 1, 2, 2, 2, 4],
+        [2, 5, 2, 2, 2, 2],
+        [2, 5, 4, 2, 2, 2],
+        [2, 5, 2, 2, 4, 2],
+        [2, 4, 2, 2, 2, 2],
+        [2, 2, 4, 4, 2, 2]
+    ]) == [19, 2], '19 of 2'
