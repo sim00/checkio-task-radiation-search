@@ -10,9 +10,20 @@
 
 </div>
 
-<p>The robots have learned that the last container NxN (3<=N<=10) which they picked up during a supply stop on another island is radioactive. There are five different kinds of spare parts contained within marked by number. The radiation is emitted from the largest group of identical spare parts (where each part is adjacently joined). Help them find this group and point out the quantity of identical parts within the group as well as the number of the spare part itself in the container.</p>
+<p>
+    The robots have learned that the last container which they picked up during a supply stop on another island is radioactive.
+    There are five different kinds of spare parts contained within marked by number.
+    The radiation is emitted from the largest group of identical spare parts (where each part is adjacently joined).
+    Help them find this group and point out the quantity of identical parts within the group as well as
+    the number of the spare part itself in the container.
+</p>
 
-<p>We have matrix A which is NxN (3<=N<=10). The numbers 1 through 5 are used to label the different kinds of spare parts--the elements of A. Find the largest group of identical numbers adjacently joined to each other and point out both the quantity of the spare parts within the group and the number of the spare part itself.</p>
+<p>
+    The container is represented as a square matrix <strong>A</strong> (3&le;|A|&le;10).
+    The numbers 1 through 5 are used to label the different kinds of spare parts -- the elements of A.
+    Zero is an empty cell.
+    Find the largest group of identical numbers adjacently joined to each other and
+    point out both the quantity of the spare parts within the group and the number of the spare part itself.</p>
 
 <p class="for_info_only" style="text-align: center;"><img src="{{ MEDIA }}radiation-search.png" alt="radiation_search"  width="400px"/></p>
 
@@ -20,25 +31,41 @@
 src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="380px"/>
 </p>
 
-<p class="p1"><strong>Input: </strong>A list of lists. Each list contains integers</p>
+<p><strong>Input: </strong>A square matrix as a list of lists. Each list contains integers</p>
 
-<p class="p1"><strong>Output: </strong>A list of two integers -- size and marking of the largest group.</p>
+<p><strong>Output: </strong>The size and marking of the largest group as a list of two integers.</p>
 
 
 <div class="for_info_only">
     <p><strong>Example:</strong></p>
 
 <pre class="brush: python">checkio([
- [1,2,3,4,5],
- [1,1,1,2,3],
- [1,1,1,2,2],
- [1,2,2,2,1],
- [1,1,1,1,1]
-])==[14,1]
+    [1, 2, 3, 4, 5],
+    [1, 1, 1, 2, 3],
+    [1, 1, 1, 2, 2],
+    [1, 2, 2, 2, 1],
+    [1, 1, 1, 1, 1]]) == [14, 1]
+
+checkio([
+    [2, 1, 2, 2, 2, 4],
+    [2, 5, 2, 2, 2, 2],
+    [2, 5, 4, 2, 2, 2],
+    [2, 5, 2, 2, 4, 2],
+    [2, 4, 2, 2, 2, 2],
+    [2, 2, 4, 4, 2, 2]]) == [19, 2]
 </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    Unions search algorithms, which are using in image recognizing.
+    In this task you can learn about Union-find algorithms and Disjoint-set data structures. It can be used in image recognizing systems.
+    You can analyse various map and search the biggest zone with similar characteristics.
+    Disjoint-set data structures model the partitioning of a set, for example to keep track of the connected components of an undirected graph.
+</p>
+
+
+<p>
+    <strong>Precondition:</strong> 3&le;|A|&le;10<br>
+    &forall; x ∈ A : 0 &le; x &le; 5<br>
+    A is not a zero matrix.
 </p>
