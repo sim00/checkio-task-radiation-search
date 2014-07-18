@@ -1,17 +1,6 @@
-<div class="story">
-<p>“Hey Nikola,” Stephen called out from behind a stack of shelves. “What’s this thing do? It’s got some kind of dial and makes clicking noises everytime I go near the container of supplies we picked up at our last stop.”</p>
-<p>“Uhhh... Hangon.” Nikola hurried over to where Stephen was standing. “No, no no no nonononono... This is bad.”</p>
-<p>“Uh, what’s bad?”</p>
-<p>“This device is a particle detector. It’s used to identify high energy particles given off by nuclear decay.”</p>
-<p>“What’s so bad ah- ah- CHOO ‘bout that?” Sofia asked, sneezing from the high concentration of dust kicked up by her pathological need to touch and play with everything on the shelf.</p>
-<p>“Well it’s being set off by something which means that there’s something radioactive nearby. Which is NOT GOOD. Radiation is very dangerous and invisible to the eye, which is especially bad for us because none of us are radiation hardened. Stephen, you said it went off near the supplies container? Which one?”</p>
-<p>“The last one. It’s about NxN big”</p>
-<p>“Okay, we need to search for the radiation source and find a better way to contain it.” </p>
-
-</div>
-
 <p>
-    The robots have learned that the last container which they picked up during a supply stop on another island is radioactive.
+    The robots have learned that the last container which they picked up during a supply stop on another island is
+    radioactive.
     There are five different kinds of spare parts contained within marked by number.
     The radiation is emitted from the largest group of identical spare parts (where each part is adjacently joined).
     Help them find this group and point out the quantity of identical parts within the group as well as
@@ -19,16 +8,18 @@
 </p>
 
 <p>
-    The container is represented as a square matrix <strong>A</strong> (3&le;|A|&le;10).
-    The numbers 1 through 5 are used to label the different kinds of spare parts -- the elements of A.
+    The container is represented as a square matrix.
+    The numbers 1 through 5 are used to label the different kinds of spare parts -- the elements of the matrix.
     Zero is an empty cell.
     Find the largest group of identical numbers adjacently joined to each other and
     point out both the quantity of the spare parts within the group and the number of the spare part itself.</p>
 
-<p class="for_info_only" style="text-align: center;"><img src="{{ MEDIA }}radiation-search.png" alt="radiation_search"  width="400px"/></p>
+<p class="for_info_only" style="text-align: center;">
+    <img src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="400px"/>
+</p>
 
-<p class="for_editor_only" style="text-align: center;"><img
-src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="380px"/>
+<p class="for_editor_only" style="text-align: center;">
+    <img src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="380px"/>
 </p>
 
 <p><strong>Input: </strong>A square matrix as a list of lists. Each list contains integers</p>
@@ -65,8 +56,9 @@ checkio([
 
 
 <p>
-    <strong>Precondition:</strong> 3&le;|A|&le;10<br>
-    &forall; x ∈ A : 0 &le; x &le; 5<br>
-    A is not a zero matrix.<br>
+    <strong>Precondition:</strong><br>
+    3 &le; len(matrix) &le; 10<br>
+    all(all(0 &le; x &le; 5 for x in row) for row in matrix<br>
+    any(any(x for x in row) for row in matrix<br>
     The tests have only one unique solutions.
 </p>
