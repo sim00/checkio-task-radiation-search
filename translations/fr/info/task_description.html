@@ -1,0 +1,68 @@
+<p>
+    Les robots ont appris que l'un des conteneurs qu'ils ont chargé lors d'une étape de ravitaillement
+    sur une autre île est radioactif.
+    Dans ce conteneur se trouvent cinq sortes de pièces détachées ; chaque sorte est identifiée par un numéro. 
+    La radiation est émise par le plus gros assemblage de pièces identiques (dans un assemblage, 
+    chaque pièce est contigüe à une autre).
+    Aidez l'équipage à trouver cet assemblage radioactif, à compter le nombre de pièces identiques qui le constituent, 
+    ainsi que le numéro de cette catégorie de pièces.
+</p>
+
+<p>
+    Le conteneur est représenté par une matrice carrée.
+    Les nombres 1 à 5 sont utilisés pour identifier les différentes catégories 
+    de pièces détachées -- les éléments de la matrice. 
+    Zero représente une case vide.
+    Trouvez le plus gros groupe de pièces identiques contigües (c'est à dire qui sont dans des cases adjacentes)
+    et déterminer le nombre de pièces dans ce plus gros assemblage, ainsi que le numéro des pièces qui le constitue.
+</p>
+
+<p class="for_info_only" style="text-align: center;">
+    <img src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="400px"/>
+</p>
+
+<p class="for_editor_only" style="text-align: center;">
+    <img src="{{ MEDIA }}radiation-search.png" alt="radiation_search" width="380px"/>
+</p>
+
+<p><strong>Input: </strong>Une matrice carrée comme liste de listes. Chaque liste contient des entiers.</p>
+
+<p><strong>Output: </strong>La taille et le marquage du plus gros assemblage de pièces identiques, comme liste de deux entiers.
+</p>
+
+
+<div class="for_info_only">
+    <p><strong>Exemple:</strong></p>
+
+<pre class="brush: python">checkio([
+    [1, 2, 3, 4, 5],
+    [1, 1, 1, 2, 3],
+    [1, 1, 1, 2, 2],
+    [1, 2, 2, 2, 1],
+    [1, 1, 1, 1, 1]]) == [14, 1]
+
+checkio([
+    [2, 1, 2, 2, 2, 4],
+    [2, 5, 2, 2, 2, 2],
+    [2, 5, 4, 2, 2, 2],
+    [2, 5, 2, 2, 4, 2],
+    [2, 4, 2, 2, 2, 2],
+    [2, 2, 4, 4, 2, 2]]) == [19, 2]
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    Dans cette mission, il s'agit d'algorithme de recherche de composante connexe (Union-finding et Disjoint-set).
+    Cela peut être appliqué à le reconnaissance d'image, à l'analyse géographique, 
+    à la modélisation du partitionnement d'un ensemble.
+</p>
+
+
+<p>
+    <strong>Préconditions:</strong><br>
+    3 &le; len(matrix) &le; 10<br>
+    all(all(0 &le; x &le; 5 for x in row) for row in matrix<br>
+    any(any(x for x in row) for row in matrix<br>
+    Les tests ont une solution unique.
+</p>
