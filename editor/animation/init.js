@@ -51,7 +51,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     return;
                 }
                 var canvas = new RadiationSearchCanvas(checkioInput, explanation);
-                canvas.createCanvas($content.find(".explanation")[0]);
+                canvas.createCanvas($expl[0]);
             }
         });
         io.start();
