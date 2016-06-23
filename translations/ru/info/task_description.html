@@ -25,7 +25,23 @@
 <div class="for_info_only">
     <p><strong>Примеры:</strong></p>
 
-<pre class="brush: python">checkio([
+<pre class="brush: python">{% if interpreter.slug == "js-node" %}
+radiationSearch([
+    [1, 2, 3, 4, 5],
+    [1, 1, 1, 2, 3],
+    [1, 1, 1, 2, 2],
+    [1, 2, 2, 2, 1],
+    [1, 1, 1, 1, 1]]) == [14, 1]
+
+radiationSearch([
+    [2, 1, 2, 2, 2, 4],
+    [2, 5, 2, 2, 2, 2],
+    [2, 5, 4, 2, 2, 2],
+    [2, 5, 2, 2, 4, 2],
+    [2, 4, 2, 2, 2, 2],
+    [2, 2, 4, 4, 2, 2]]) == [19, 2]
+{% else %}
+checkio([
     [1, 2, 3, 4, 5],
     [1, 1, 1, 2, 3],
     [1, 1, 1, 2, 2],
@@ -39,7 +55,7 @@ checkio([
     [2, 5, 2, 2, 4, 2],
     [2, 4, 2, 2, 2, 2],
     [2, 2, 4, 4, 2, 2]]) == [19, 2]
-</pre>
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">

@@ -44,6 +44,10 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
         }
 
         var io = new extIO({
+            functions: {
+                js: 'radiationSearch',
+                python: 'checkio'
+            },
             animation: function($expl, data){
                 var checkioInput = data.in;
                 var explanation = data.ext?data.ext["explanation"]:undefined;
