@@ -13,7 +13,7 @@ if (!global.is_checking) {
         [1, 1, 1, 2, 2],
         [1, 2, 2, 2, 1],
         [1, 1, 1, 1, 1]
-    ]), [14, 1], "14 of 1");
+    ]).toString(), [14, 1].toString(), "14 of 1");
     assert.equal(radiationSearch([
         [2, 1, 2, 2, 2, 4],
         [2, 5, 2, 2, 2, 2],
@@ -21,6 +21,6 @@ if (!global.is_checking) {
         [2, 5, 2, 2, 4, 2],
         [2, 4, 2, 2, 2, 2],
         [2, 2, 4, 4, 2, 2]
-    ]), [19, 2], "19 of 2");
+    ]).toString(), [19, 2].toString(), "19 of 2");
     console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
 }
